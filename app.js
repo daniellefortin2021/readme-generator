@@ -3,12 +3,20 @@
 
 const inquirer = require("inquirer");
 
-inquirer
-    .prompt([
+const promptUser = () => {
+    return inquirer.prompt([
         {
             type: 'input',
             name: 'username',
-            message: 'What is your GitHub username?'
+            message: 'What is your GitHub username?',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your name!');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
@@ -64,3 +72,6 @@ inquirer
         },
     ])
     .then(answers => console.log(answers));
+}
+
+promptUser()
