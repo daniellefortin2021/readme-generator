@@ -1,6 +1,7 @@
 //const fs = require('fs');
 //const generateReadMe = require('');
 
+const { writeFile } = require("fs");
 const inquirer = require("inquirer");
 
 const promptUser = () => {
@@ -13,7 +14,7 @@ const promptUser = () => {
                 if (nameInput) {
                     return true;
                 } else {
-                    console.log('Please enter your name!');
+                    console.log('Please enter your name.');
                     return false;
                 }
             }
@@ -26,7 +27,7 @@ const promptUser = () => {
                 if (emailInput) {
                     return true;
                 } else {
-                    console.log('Please enter your email address!');
+                    console.log('Please enter your email address.');
                     return false;
                 }
             }
@@ -39,7 +40,7 @@ const promptUser = () => {
                 if (titleInput) {
                     return true;
                 } else {
-                    console.log('Please enter your project title!');
+                    console.log('Please enter your project title.');
                     return false;
                 }
             }
@@ -52,7 +53,7 @@ const promptUser = () => {
                 if (linkInput) {
                     return true;
                 } else {
-                    console.log('Please add a link to your project!');
+                    console.log('Please add a link to your project.');
                     return false;
                 }
             }
@@ -132,3 +133,9 @@ const promptUser = () => {
 }
 
 promptUser()
+.then(answers => {
+    return generateReadMe(answers);
+})
+.then(data => {
+    return writeFile(data);
+})
