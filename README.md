@@ -1,10 +1,9 @@
-const generateReadMe = answers => {
-    return `
+
     
-    ## ${answers.title}
+    ## sad
     
     ## Description
-    ${answers.description}
+    asd
 
     ## Table of Contents
     * [Languages](#languages)
@@ -16,28 +15,24 @@ const generateReadMe = answers => {
     * [License](#license)
 
     ## Built With
-    This project was built with ${answers.languages}
+    This project was built with HTML
     
     ## Link
-    ${answers.link}
+    123
 
     ## Installation
-    ${answers.installation}
+    qwe
 
     ## Usage 
-    ${answers.usage}
+    sda
 
     ## Contribution
-    ${answers.contribution}
+    e1w
 
     ## Tests
-    ${answers.test}
+    dfs
 
     ## License 
-    This project is licensed under ${answers.license}.
+    This project is licensed under MIT.
 
-    `
-}
-
-
-module.exports = generateReadMe;
+    

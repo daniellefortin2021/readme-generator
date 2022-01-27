@@ -1,10 +1,10 @@
-//const fs = require('fs');
-//const generateReadMe = require('');
-
-const { writeFile } = require("fs");
+const fs = require('fs');
 const inquirer = require("inquirer");
 
-const promptUser = () => {
+//develop readme from info
+const generateReadMe = require('./utils/generatepage.js');
+
+const promptUser = async () => {
     return inquirer.prompt([
         {
             type: 'input',
@@ -129,13 +129,32 @@ const promptUser = () => {
             choices: ['MIT', 'GNU']
         },
     ])
-    .then(answers => console.log(answers));
-}
+    // .then(answers => console.log(answers.title));
+};
 
+//function create README file with file system
+const writeFile = answers => {
+    fs.writeFile('README.md', answers, err => {
+        // if error, reject promise
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log('Your README file has been created!');
+        }
+    });
+};
+
+//functions to start app 
 promptUser()
+// get answers to add to readme
 .then(answers => {
-    return generateReadMe(answers);
+    // console.log(answers)
+    // console.log(generateReadMe(answers));
+    writeFile(generateReadMe(answers))
 })
-.then(data => {
-    return writeFile(data);
-})
+
+// use data to write readme file
+// .then(answers => {
+//     return writeFile(answers);
+// })
