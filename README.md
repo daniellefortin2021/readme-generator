@@ -13,7 +13,7 @@ This appliction allows users to generate professional README files by answering 
 * [License](#license)
 
 ## Built With
-This project was built with JavaScript,HTML,Node
+This project was built with JavaScript, HTML, Node.
     
 ## Link
 https://github.com/daniellefortin2021/readme-generator#readme
