@@ -1,9 +1,9 @@
 
     
-    ## sad
+    ## Readme Generator
     
     ## Description
-    asd
+    This appliction allows users to generate professional README files by answering a series of questions in their command line using Node.js.
 
     ## Table of Contents
     * [Languages](#languages)
@@ -15,22 +15,22 @@
     * [License](#license)
 
     ## Built With
-    This project was built with HTML
+    This project was built with JavaScript,HTML,Node
     
     ## Link
-    123
+    https://github.com/daniellefortin2021/readme-generator
 
     ## Installation
-    qwe
+    The user will need to clone the repository from GitHub and install Node. The user will also need to install file system and the inquirer module.
 
     ## Usage 
-    sda
+    Run node from your command line to answer a series of questions. Your answers will determine what content the README file contains.
 
     ## Contribution
-    e1w
+    There is no contribution necessary for this repository.
 
     ## Tests
-    dfs
+    npm test
 
     ## License 
     This project is licensed under MIT.

@@ -149,12 +149,7 @@ const writeFile = answers => {
 promptUser()
 // get answers to add to readme
 .then(answers => {
-    // console.log(answers)
     // console.log(generateReadMe(answers));
     writeFile(generateReadMe(answers))
 })
 
-// use data to write readme file
-// .then(answers => {
-//     return writeFile(answers);
-// })
